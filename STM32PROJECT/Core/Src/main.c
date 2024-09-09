@@ -92,13 +92,14 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
+  init_exercise3();
   int num = 0;
   while (1)
   {
-	  setNumberOnClock(num);
-	  num++;
 	  if(num == 12)
 		  num = 0;
+	  setNumberOnClock(num);
+	  num++;
 
 	  HAL_Delay(1000);
     /* USER CODE END WHILE */
