@@ -23,6 +23,7 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "Ex3.h"
+#include "Ex7.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -93,7 +94,7 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-	  exercise3_run();
+	  clearAllClock();
 
 	  HAL_Delay(1000);
     /* USER CODE END WHILE */
