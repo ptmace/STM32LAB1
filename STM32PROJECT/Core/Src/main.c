@@ -23,6 +23,7 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "Ex3.h"
+#include "Ex9.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -91,9 +92,14 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
+  init_exercise9();
+  int num = 0;
   while (1)
   {
-	  exercise3_run();
+	  if(num == 12)
+		  num = 0;
+	  clearNumberOnClock(num);
+	  num++;
 
 	  HAL_Delay(1000);
     /* USER CODE END WHILE */
