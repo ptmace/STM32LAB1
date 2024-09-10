@@ -4,7 +4,7 @@
  *  Created on: Sep 9, 2024
  *      Author: 2004p
  */
-#include "main.h"
+#include "Ex1.h"
 
 
 int count2s = 0;
