@@ -6,7 +6,7 @@
  */
 #include "Ex5.h"
 
-int counts = 0;
+int count = 0;
 
 void display7SEG(int number)
 {
@@ -144,7 +144,7 @@ void display7SEG(int number)
 }
 
 void exercise5_run(){
-	switch(counts){
+	switch(count){
 		case 0:
 			init_exercise3();
 			HAL_GPIO_WritePin(LED_1_GPIO_Port, LED_1_Pin, SET);
@@ -153,11 +153,11 @@ void exercise5_run(){
 			HAL_GPIO_WritePin(LED_3_GPIO_Port, LED_3_Pin, SET);
 		    HAL_GPIO_WritePin(LED_9_GPIO_Port, LED_9_Pin, SET);
 		    display7SEG(9);
-		    counts++;
+		    count++;
 		    break;
 		case 1:
 			display7SEG(8);
-			counts++;
+			count++;
 			break;
 		case 2:
 		  	HAL_GPIO_WritePin(LED_3_GPIO_Port, LED_3_Pin, RESET);
@@ -166,15 +166,15 @@ void exercise5_run(){
 		    HAL_GPIO_WritePin(LED_4_GPIO_Port, LED_4_Pin, SET);
 		    HAL_GPIO_WritePin(LED_8_GPIO_Port, LED_8_Pin, SET);
 		    display7SEG(7);
-		    counts++;
+		    count++;
 		    break;
 		case 3:
 			display7SEG(6);
-			counts++;
+			count++;
 			break;
 		case 4:
 			display7SEG(5);
-			counts++;
+			count++;
 			break;
 		case 5:
 		  	HAL_GPIO_WritePin(LED_1_GPIO_Port, LED_1_Pin, RESET);
@@ -188,11 +188,11 @@ void exercise5_run(){
 		    HAL_GPIO_WritePin(LED_6_GPIO_Port, LED_6_Pin, SET);
 		    HAL_GPIO_WritePin(LED_12_GPIO_Port, LED_12_Pin, SET);
 		    display7SEG(4);
-		    counts++;
+		    count++;
 		    break;
 		case 6:
 			display7SEG(3);
-			counts++;
+			count++;
 			break;
 		case 7:
 			HAL_GPIO_WritePin(LED_6_GPIO_Port, LED_6_Pin, RESET);
@@ -200,18 +200,18 @@ void exercise5_run(){
 		  	HAL_GPIO_WritePin(LED_7_GPIO_Port, LED_7_Pin, SET);
 		    HAL_GPIO_WritePin(LED_11_GPIO_Port, LED_11_Pin, SET);
 		    display7SEG(2);
-		    counts++;
+		    count++;
 		    break;
 		case 8:
 			display7SEG(1);
-			counts++;
+			count++;
 			break;
 		case 9:
 			display7SEG(0);
-			counts = 0;
+			count = 0;
 			break;
 		default:
-			counts++;
+			count++;
 	}
 }
 

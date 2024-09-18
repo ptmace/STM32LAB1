@@ -39,11 +39,11 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY, DEBUGGING, OCTETS
  17 .debug_line   000064cf  00000000  00000000  0003a6a4  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 18 .debug_str    00079bc3  00000000  00000000  00040b73  2**0
+ 18 .debug_str    00079bc2  00000000  00000000  00040b73  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 19 .comment      00000053  00000000  00000000  000ba736  2**0
+ 19 .comment      00000053  00000000  00000000  000ba735  2**0
                   CONTENTS, READONLY
- 20 .debug_frame  00000dc8  00000000  00000000  000ba78c  2**2
+ 20 .debug_frame  00000dc8  00000000  00000000  000ba788  2**2
                   CONTENTS, READONLY, DEBUGGING, OCTETS
 
 Disassembly of section .text:
@@ -155,7 +155,7 @@ void init_exercise3(){
 080001d8 <display7SEG>:
 #include "Ex5.h"
 
-int counts = 0;
+int count = 0;
 
 void display7SEG(int number)
 {
@@ -643,7 +643,7 @@ void display7SEG(int number)
 void exercise5_run(){
  80005dc:	b580      	push	{r7, lr}
  80005de:	af00      	add	r7, sp, #0
-	switch(counts){
+	switch(count){
  80005e0:	4b73      	ldr	r3, [pc, #460]	; (80007b0 <exercise5_run+0x1d4>)
  80005e2:	681b      	ldr	r3, [r3, #0]
  80005e4:	2b09      	cmp	r3, #9
@@ -687,7 +687,7 @@ void exercise5_run(){
 		    display7SEG(9);
  8000646:	2009      	movs	r0, #9
  8000648:	f7ff fdc6 	bl	80001d8 <display7SEG>
-		    counts++;
+		    count++;
  800064c:	4b58      	ldr	r3, [pc, #352]	; (80007b0 <exercise5_run+0x1d4>)
  800064e:	681b      	ldr	r3, [r3, #0]
  8000650:	3301      	adds	r3, #1
@@ -699,7 +699,7 @@ void exercise5_run(){
 			display7SEG(8);
  8000658:	2008      	movs	r0, #8
  800065a:	f7ff fdbd 	bl	80001d8 <display7SEG>
-			counts++;
+			count++;
  800065e:	4b54      	ldr	r3, [pc, #336]	; (80007b0 <exercise5_run+0x1d4>)
  8000660:	681b      	ldr	r3, [r3, #0]
  8000662:	3301      	adds	r3, #1
@@ -732,7 +732,7 @@ void exercise5_run(){
 		    display7SEG(7);
  8000694:	2007      	movs	r0, #7
  8000696:	f7ff fd9f 	bl	80001d8 <display7SEG>
-		    counts++;
+		    count++;
  800069a:	4b45      	ldr	r3, [pc, #276]	; (80007b0 <exercise5_run+0x1d4>)
  800069c:	681b      	ldr	r3, [r3, #0]
  800069e:	3301      	adds	r3, #1
@@ -744,7 +744,7 @@ void exercise5_run(){
 			display7SEG(6);
  80006a6:	2006      	movs	r0, #6
  80006a8:	f7ff fd96 	bl	80001d8 <display7SEG>
-			counts++;
+			count++;
  80006ac:	4b40      	ldr	r3, [pc, #256]	; (80007b0 <exercise5_run+0x1d4>)
  80006ae:	681b      	ldr	r3, [r3, #0]
  80006b0:	3301      	adds	r3, #1
@@ -756,7 +756,7 @@ void exercise5_run(){
 			display7SEG(5);
  80006b8:	2005      	movs	r0, #5
  80006ba:	f7ff fd8d 	bl	80001d8 <display7SEG>
-			counts++;
+			count++;
  80006be:	4b3c      	ldr	r3, [pc, #240]	; (80007b0 <exercise5_run+0x1d4>)
  80006c0:	681b      	ldr	r3, [r3, #0]
  80006c2:	3301      	adds	r3, #1
@@ -810,7 +810,7 @@ void exercise5_run(){
 		    display7SEG(4);
  800071e:	2004      	movs	r0, #4
  8000720:	f7ff fd5a 	bl	80001d8 <display7SEG>
-		    counts++;
+		    count++;
  8000724:	4b22      	ldr	r3, [pc, #136]	; (80007b0 <exercise5_run+0x1d4>)
  8000726:	681b      	ldr	r3, [r3, #0]
  8000728:	3301      	adds	r3, #1
@@ -822,7 +822,7 @@ void exercise5_run(){
 			display7SEG(3);
  8000730:	2003      	movs	r0, #3
  8000732:	f7ff fd51 	bl	80001d8 <display7SEG>
-			counts++;
+			count++;
  8000736:	4b1e      	ldr	r3, [pc, #120]	; (80007b0 <exercise5_run+0x1d4>)
  8000738:	681b      	ldr	r3, [r3, #0]
  800073a:	3301      	adds	r3, #1
@@ -854,7 +854,7 @@ void exercise5_run(){
 		    display7SEG(2);
  800076e:	2002      	movs	r0, #2
  8000770:	f7ff fd32 	bl	80001d8 <display7SEG>
-		    counts++;
+		    count++;
  8000774:	4b0e      	ldr	r3, [pc, #56]	; (80007b0 <exercise5_run+0x1d4>)
  8000776:	681b      	ldr	r3, [r3, #0]
  8000778:	3301      	adds	r3, #1
@@ -866,7 +866,7 @@ void exercise5_run(){
 			display7SEG(1);
  8000780:	2001      	movs	r0, #1
  8000782:	f7ff fd29 	bl	80001d8 <display7SEG>
-			counts++;
+			count++;
  8000786:	4b0a      	ldr	r3, [pc, #40]	; (80007b0 <exercise5_run+0x1d4>)
  8000788:	681b      	ldr	r3, [r3, #0]
  800078a:	3301      	adds	r3, #1
@@ -878,14 +878,14 @@ void exercise5_run(){
 			display7SEG(0);
  8000792:	2000      	movs	r0, #0
  8000794:	f7ff fd20 	bl	80001d8 <display7SEG>
-			counts = 0;
+			count = 0;
  8000798:	4b05      	ldr	r3, [pc, #20]	; (80007b0 <exercise5_run+0x1d4>)
  800079a:	2200      	movs	r2, #0
  800079c:	601a      	str	r2, [r3, #0]
 			break;
  800079e:	e005      	b.n	80007ac <exercise5_run+0x1d0>
 		default:
-			counts++;
+			count++;
  80007a0:	4b03      	ldr	r3, [pc, #12]	; (80007b0 <exercise5_run+0x1d4>)
  80007a2:	681b      	ldr	r3, [r3, #0]
  80007a4:	3301      	adds	r3, #1
