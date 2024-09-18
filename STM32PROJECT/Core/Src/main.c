@@ -92,10 +92,10 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-  init_exercise3();
   int num = 0;
   while (1)
   {
+	  init_exercise3();
 	  if(num == 12)
 		  num = 0;
 	  setNumberOnClock(num);
