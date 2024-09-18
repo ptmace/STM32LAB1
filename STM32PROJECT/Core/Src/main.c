@@ -22,8 +22,7 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-#include "Ex3.h"
-#include "Ex8.h"
+#include "Ex10.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -92,15 +91,9 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-  init_exercise3();
-  int num = 0;
   while (1)
   {
-	  if(num == 12)
-		  num = 0;
-	  setNumberOnClock(num);
-	  num++;
-
+	  Clock_run();
 	  HAL_Delay(1000);
     /* USER CODE END WHILE */
 
