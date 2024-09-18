@@ -148,13 +148,13 @@ void exercise5_run(){
 		case 0:
 			init_exercise3();
 			HAL_GPIO_WritePin(LED_1_GPIO_Port, LED_1_Pin, SET);
-		    HAL_GPIO_WritePin(LED_5_GPIO_Port, LED_5_Pin, SET);
+			HAL_GPIO_WritePin(LED_5_GPIO_Port, LED_5_Pin, SET);
 
 			HAL_GPIO_WritePin(LED_3_GPIO_Port, LED_3_Pin, SET);
-		    HAL_GPIO_WritePin(LED_9_GPIO_Port, LED_9_Pin, SET);
-		    display7SEG(9);
-		    count++;
-		    break;
+			HAL_GPIO_WritePin(LED_9_GPIO_Port, LED_9_Pin, SET);
+			display7SEG(9);
+			count++;
+			break;
 		case 1:
 			display7SEG(8);
 			count++;
