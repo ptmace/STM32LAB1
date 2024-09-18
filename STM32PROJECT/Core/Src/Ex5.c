@@ -165,9 +165,9 @@ void exercise5_run(){
 
 			HAL_GPIO_WritePin(LED_4_GPIO_Port, LED_4_Pin, SET);
 			HAL_GPIO_WritePin(LED_8_GPIO_Port, LED_8_Pin, SET);
-		    display7SEG(7);
-		    count++;
-		    break;
+			display7SEG(7);
+			count++;
+			break;
 		case 3:
 			display7SEG(6);
 			count++;
@@ -178,17 +178,17 @@ void exercise5_run(){
 			break;
 		case 5:
 			HAL_GPIO_WritePin(LED_1_GPIO_Port, LED_1_Pin, RESET);
-		    HAL_GPIO_WritePin(LED_5_GPIO_Port, LED_5_Pin, RESET);
-		    HAL_GPIO_WritePin(LED_4_GPIO_Port, LED_4_Pin, RESET);
-		    HAL_GPIO_WritePin(LED_8_GPIO_Port, LED_8_Pin, RESET);
+			HAL_GPIO_WritePin(LED_5_GPIO_Port, LED_5_Pin, RESET);
+			HAL_GPIO_WritePin(LED_4_GPIO_Port, LED_4_Pin, RESET);
+			HAL_GPIO_WritePin(LED_8_GPIO_Port, LED_8_Pin, RESET);
 
-		    HAL_GPIO_WritePin(LED_2_GPIO_Port, LED_2_Pin, SET);
-		    HAL_GPIO_WritePin(LED_10_GPIO_Port, LED_10_Pin, SET);
+			HAL_GPIO_WritePin(LED_2_GPIO_Port, LED_2_Pin, SET);
+			HAL_GPIO_WritePin(LED_10_GPIO_Port, LED_10_Pin, SET);
 
-		    HAL_GPIO_WritePin(LED_6_GPIO_Port, LED_6_Pin, SET);
-		    HAL_GPIO_WritePin(LED_12_GPIO_Port, LED_12_Pin, SET);
-		    display7SEG(4);
-		    count++;
+			HAL_GPIO_WritePin(LED_6_GPIO_Port, LED_6_Pin, SET);
+			HAL_GPIO_WritePin(LED_12_GPIO_Port, LED_12_Pin, SET);
+			display7SEG(4);
+			count++;
 		    break;
 		case 6:
 			display7SEG(3);
@@ -197,11 +197,11 @@ void exercise5_run(){
 		case 7:
 			HAL_GPIO_WritePin(LED_6_GPIO_Port, LED_6_Pin, RESET);
 			HAL_GPIO_WritePin(LED_12_GPIO_Port, LED_12_Pin, RESET);
-		  	HAL_GPIO_WritePin(LED_7_GPIO_Port, LED_7_Pin, SET);
-		  	HAL_GPIO_WritePin(LED_11_GPIO_Port, LED_11_Pin, SET);
-		  	display7SEG(2);
-		    count++;
-		    break;
+			HAL_GPIO_WritePin(LED_7_GPIO_Port, LED_7_Pin, SET);
+			HAL_GPIO_WritePin(LED_11_GPIO_Port, LED_11_Pin, SET);
+			display7SEG(2);
+			count++;
+			break;
 		case 8:
 			display7SEG(1);
 			count++;
